@@ -74,6 +74,7 @@ __Prototipo (Alta fidelidad)__
 Esta fue nuestra primera propuesta.
 
 Nuestro primer bosquejo:
+
 ![alt text](imagenes/protA1.jpeg)
 
 ![alt text](imagenes/protA2.jpeg)
