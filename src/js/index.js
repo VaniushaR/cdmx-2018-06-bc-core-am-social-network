@@ -1,10 +1,11 @@
 const drawlogin =()=> {
 const login = document.getElementById("login");
 // Draw inputs in Index
-  login.innerHTML = `<input class="validate" type="text" placeholder="Nombre..." id ="nick">
+  login.innerHTML = `<h3 id="titulos2">Sign in</h3>
+  <input class="validate" type="text" placeholder="Nombre..." id ="nick">
   <input class="validate" type="text" placeholder="Email..." id ="email">
   <input class="validate" type="password" placeholder="Password..." id = "password">
-  <input type="button" value="Iniciar Sesión" id="sesion">`;
+  <input class="waves-effect waves-light btn" class="btn-floating pulse"  type="button" value="Iniciar Sesión" id="sesion">`;
 };
 
 
