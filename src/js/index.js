@@ -13,7 +13,7 @@ const drawlogout =()=> {
 const logout = document.getElementById("userlogout");
 let mail = document.getElementById("email").value;
 // Draw button logout
-logout.innerHTML = `<label id="user_id"></label><input type="button" value="Cerrar sesion" id="logout">`;
+logout.innerHTML = `<label class="waves-effect waves-light btn" class="btn-floating pulse" id="user_id"></label><input type="button" value="Cerrar sesion" id="logout">`;
 };
 
 
