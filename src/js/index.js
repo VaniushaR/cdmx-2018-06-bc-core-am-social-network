@@ -1,13 +1,14 @@
 const drawlogin =()=> {
 const login = document.getElementById('login');
 // Draw inputs in Index
-  login.innerHTML = `<input type='text' placeholder='Email...' id ='email'>
+  login.innerHTML = `<input type='text' placeholder='Nickname...' id ='nick'>
+  <input type='text' placeholder='Email...' id ='email'>
   <input type='password' placeholder='Password...' id = 'password'>
   <input type='button' value='Iniciar Sesión' id='sesion'>`;
 };
 
 
-const drawlogout =()=> {
+const drawlogout = ()=> {
 const logout = document.getElementById('userlogout');
 let mail = document.getElementById('email').value;
 // Draw button logout
@@ -15,8 +16,8 @@ logout.innerHTML = `<label id='user_id'></label><input type='button' value='Cerr
 };
 
 
-window.onload = drawlogin();
-window.onload = drawlogout();
+drawlogin();
+drawlogout();
 
 firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
@@ -26,7 +27,7 @@ firebase.auth().onAuthStateChanged(function(user) {
     let user = firebase.auth().currentUser;
     if (user != null) {
       let email_id = user.email;
-      document.getElementById('user_id').innerHTML = `Welcome User: ${email_id}`;
+      document.getElementById('user_id').innerHTML = `Welcome Mexican Lover: ${email_id}`;
 
     }
   } else {
@@ -38,11 +39,11 @@ firebase.auth().onAuthStateChanged(function(user) {
 });
 
 const getdata =()=> {
-const mail = document.getElementById('email').value;
-console.log(mail);
-const password = document.getElementById('password').value;
+const mail = document.getElementById('email');
+const password = document.getElementById('password');
+const nick = document.getElementById('nick');
 
-firebase.auth().signInWithEmailAndPassword(mail, password).catch(function(error) {
+firebase.auth().signInWithEmailAndPassword(mail.value, password.value).catch(function(error) {
   // Handle Errors here.
   var errorCode = error.code;
   var errorMessage = error.message;
