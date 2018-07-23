@@ -1,3 +1,11 @@
 #login, #userlogout {
+    text-align: center,
+}
 
+#sesion {
+    color: aliceblue;
+}
+
+#titulos2 {
+    color: gray;
 }
