@@ -11,6 +11,19 @@
   color: gray;
 }
 .aboutme-card {
-  color: #9e4f13;
   background-color: #f9f888;
+  color: #9e4f13;
+}
+.fixed-navbar {
+  background-color: white;
+  color: gray;
+}
+a:hover {
+  background-color: #41bb9a;
+}
+.icon-pad {
+  padding: 20%;
+}
+h4 {
+  font-family: "Impact", sans-serif;
 }
