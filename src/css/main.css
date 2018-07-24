@@ -1,11 +1,16 @@
-#login, #userlogout {
-    text-align: center,
+#login,
+#userlogout {
+  text-align: center;
 }
 
 #sesion {
-    color: aliceblue;
+  color: aliceblue;
 }
 
 #titulos2 {
-    color: gray;
+  color: gray;
+}
+.aboutme-card {
+  color: #9e4f13;
+  background-color: #f9f888;
 }
