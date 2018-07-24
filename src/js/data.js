@@ -76,6 +76,5 @@ createUser : ()=>{
 
 
 }
-}
-
+};
 network.loadFirebase();

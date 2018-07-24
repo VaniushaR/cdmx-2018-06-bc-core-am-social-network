@@ -1,13 +1,13 @@
+
 const profileuser =(user)=>{
 let name = document.getElementById('name');
+let email = document.getElementById('email');
+let icon = document.getElementById('iconuser');
+icon.innerHTML =`<img class='circle' src='${user.photoURL}'>`;
 name.innerHTML = user.displayName;
-}
+email.innerHTML = `<span class='white-text email'>${user.email}</span>`;
 
-// Button logout
-let unsesion = document.getElementById("logout");
-const logout =()=> {
-  firebase.auth().signOut();
-    location.href = ('../index.html');
+
 }
 
 firebase.auth().onAuthStateChanged(user => {
@@ -44,6 +44,10 @@ const addUser=(uid, name) =>{
 
 }
 
-
-
-unsesion.addEventListener("click", logout);
+// Button logout
+let unsesion = document.getElementById("logout");
+const logout =()=> {
+  firebase.auth().signOut();
+    location.href = ('../index.html');
+}
+unsesion.addEventListener('click', logout);
