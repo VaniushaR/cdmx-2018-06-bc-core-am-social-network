@@ -8,6 +8,7 @@
 }
 
 #titulos2 {
+
   color: gray;
 }
 .aboutme-card {
@@ -26,4 +27,7 @@ a:hover {
 }
 h4 {
   font-family: "Impact", sans-serif;
+=======
+    color: gray;
+
 }
