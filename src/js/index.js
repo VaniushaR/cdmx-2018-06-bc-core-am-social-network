@@ -17,7 +17,7 @@ const iconPerfil = document.getElementById('userlogout');
 
 drawlogin();
 // Entrar a la Database
-let database = firebase.database();
+
 
 firebase.auth().onAuthStateChanged(user => {
   if (user) {

@@ -70,6 +70,11 @@ loginFacebook: () => {
 firebase.auth().signOut();
 }
 
+},
+
+createUser : ()=>{
+
+
 }
 }
 
