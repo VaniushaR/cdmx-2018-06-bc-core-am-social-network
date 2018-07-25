@@ -1,3 +1,6 @@
+*{
+  font-family: 'Dosis', sans-serif;
+}
 #login,
 #userlogout {
   text-align: center;
