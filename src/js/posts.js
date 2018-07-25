@@ -17,11 +17,9 @@ firebase.auth().onAuthStateChanged(user => {
     if (user != null) {
       profileuser(user);
         // Reference
-      userConnect = database.ref('/user');
+      userConnect = database.ref(`user/${user.uid}`);
       addUser(user.uid, user.displayName);
-      userConnect.on('child_added', data =>{
-        console.log('Ha Ingresado a la sala' + data.val().name);
-      });
+
       //child_added:
       //child_changed:
       //child_remove:
@@ -44,10 +42,58 @@ const addUser=(uid, name) =>{
 
 }
 
+
+const updatepost =()=> {
+firebase.database().ref('posts').on('value', snapshot => {
+  let html ='';
+snapshot.forEach(e => {
+let element = e.val();
+let title = element.title;
+let post = element.post;
+html += `<li><h2>${title}</h2></li>
+<li>${post}</li>`;
+});
+post.innerHTML = html;
+
+});
+
+}
+
+
+
+const posts =()=> {
+  let post = document.getElementById('post');
+  let title =document.getElementById('title');
+  let massage =document.getElementById('recipe');
+  let titlePost = title.value;
+  // console.log(titlePost);
+  let massagepost = massage.value;
+  // console.log(massagepost);
+   post.innerHTML += `  <li><h2>${titlePost}</h2></li>
+   <li>${massagepost}</li>`;
+
+firebase.database().ref('posts').push({
+  title: titlePost,
+  post: massagepost
+
+});
+updatepost();
+titlePost ='';
+massagepost='';
+}
+
+
+window.onload = updatepost();
+// Post button
+let btnpost = document.getElementById('btnpost');
+
+
 // Button logout
 let unsesion = document.getElementById("logout");
 const logout =()=> {
   firebase.auth().signOut();
     location.href = ('../index.html');
 }
+
+btnpost.addEventListener('click', posts);
 unsesion.addEventListener('click', logout);
