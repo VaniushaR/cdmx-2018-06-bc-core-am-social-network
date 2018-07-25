@@ -27,8 +27,6 @@ Sign in
 drawlogin();
 
 // Entrar a la Database
-
-
 firebase.auth().onAuthStateChanged(user => {
   if (user) {
     // User is signed in.
@@ -43,7 +41,7 @@ firebase.auth().onAuthStateChanged(user => {
   }
 });
 
- const getdata =()=> {
+const getdata =()=> {
 const mail = document.getElementById('email');
 const password = document.getElementById('password');
 const nick = document.getElementById('nick');
@@ -67,9 +65,7 @@ firebase.auth().signInWithEmailAndPassword(mail.value, password.value).catch(err
       // ...
     });
 };
-
 let sesion = document.getElementById("sesion");
-
 sesion.addEventListener("click",getdata);
 let google = document.getElementById('sesionGoogle');
 google.addEventListener('click', event => {
