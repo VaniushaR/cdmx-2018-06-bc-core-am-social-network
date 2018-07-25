@@ -19,7 +19,6 @@ firebase.auth().onAuthStateChanged(user => {
         // Reference
       userConnect = database.ref(`user/${user.uid}`);
       addUser(user.uid, user.displayName);
-
       //child_added:
       //child_changed:
       //child_remove:
@@ -42,7 +41,6 @@ const addUser=(uid, name) =>{
 
 }
 
-
 const updatepost =()=> {
 firebase.database().ref('posts').on('value', snapshot => {
 let html ='';
@@ -59,8 +57,6 @@ post.innerHTML = html;
 });
 
 }
-
-
 
 const posts =()=> {
   let post = document.getElementById('post');
@@ -84,11 +80,9 @@ titlePost ='';
 massagepost='';
 }
 
-
 window.onload = updatepost();
 // Post button
 let btnpost = document.getElementById('btnpost');
-
 
 // Button logout
 let unsesion = document.getElementById("logout");
