@@ -45,11 +45,12 @@ const addUser=(uid, name) =>{
 
 const updatepost =()=> {
 firebase.database().ref('posts').on('value', snapshot => {
-  let html ='';
+let html ='';
 snapshot.forEach(e => {
 let element = e.val();
 let title = element.title;
 let post = element.post;
+// Pinto los post que se obtiene en la base de datos
 html += `<li><h2>${title}</h2></li>
 <li>${post}</li>`;
 });
@@ -69,6 +70,7 @@ const posts =()=> {
   // console.log(titlePost);
   let massagepost = massage.value;
   // console.log(massagepost);
+  // Pinto en una tabla los post
    post.innerHTML += `  <li><h2>${titlePost}</h2></li>
    <li>${massagepost}</li>`;
 
