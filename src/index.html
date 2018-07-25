@@ -1,28 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <!-- Compiled and minified CSS MATERIALIZE-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
-
-    <link rel="stylesheet" href="../src/css/main.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+    <link rel="stylesheet" href="css/main.css">
     <title>Comida Mexicana Saludable</title>
 </head>
-
 <body>
-
-    <div class="container">
-        <div class="row" class="valign-wrapper">
+  <div class="container">
+        <div class="row valign-wrapper">
             <form class="col s12">
-                    <img class="responsive-img" src="images/logo.png">
+                <img class="responsive-img" src="images/logo.png">
                 <div class="row">
                     <section class="col s6 offset-s3" id="login">
-                        <div class="input-field col s4 offset-s4">
-                            <label class="active" for="nick">User Name</label>
-                        </div>
                         <div class="input-field col s6 offset-s3">
                             <label class="active" for="email">Email </label>
                         </div>
@@ -31,29 +24,19 @@
                         </div>
                     </section>
                 </div>
-                <section class="col s6 offset-s3" id="userlogout">
+                <section class="col s10 offset-s2" id="userlogout" text>
                 </section>
             </form>
         </div>
     </div>
-
-    <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
-    <script>
-        // Initialize Firebase
-        var config = {
-            apiKey: "AIzaSyAaMEeTfLhwDTFiUWVNbJp39Q3eYDQgT14",
-            authDomain: "red-social-4ed2d.firebaseapp.com",
-            databaseURL: "https://red-social-4ed2d.firebaseio.com",
-            projectId: "red-social-4ed2d",
-            storageBucket: "red-social-4ed2d.appspot.com",
-            messagingSenderId: "704831096005"
-        };
-        firebase.initializeApp(config);
-    </script>
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
-    <script type="text/javascript" src="../src/js/index.js"></script>
-    <script type="text/javascript" src="../src/js/data.js"></script>
+<!-- Get Firebase -->
+<script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+<!--JQuery para estilos-->
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"> </script>
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+<script type="text/javascript" src="js/data.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
 </body>
 
 </html>
