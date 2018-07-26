@@ -17,7 +17,6 @@ firebase.auth().onAuthStateChanged(user => {
         // Reference
       userConnect = database.ref(`user/${user.uid}/posts`);
       addUser(user.uid, user.displayName);
-
       //child_added:
       //child_changed:
       //child_remove:
