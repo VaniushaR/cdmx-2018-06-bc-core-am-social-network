@@ -6,8 +6,6 @@ let icon = document.getElementById('iconuser');
 icon.innerHTML =`<img class='circle' src='${user.photoURL}'>`;
 name.innerHTML = user.displayName;
 email.innerHTML = `<span class='white-text email'>${user.email}</span>`;
-
-
 }
 
 firebase.auth().onAuthStateChanged(user => {
@@ -17,19 +15,15 @@ firebase.auth().onAuthStateChanged(user => {
     if (user != null) {
       profileuser(user);
         // Reference
-      userConnect = database.ref(`user/${user.uid}`);
+      userConnect = database.ref(`user/${user.uid}/posts`);
       addUser(user.uid, user.displayName);
 
       //child_added:
       //child_changed:
       //child_remove:
-
-
     }
   } else {
-
-
-  }
+}
 });
 
 let database = firebase.database();
@@ -42,7 +36,6 @@ const addUser=(uid, name) =>{
 
 }
 
-
 const updatepost =()=> {
 firebase.database().ref('posts').on('value', snapshot => {
 let html ='';
@@ -50,17 +43,15 @@ snapshot.forEach(e => {
 let element = e.val();
 let title = element.title;
 let post = element.post;
-// Pinto los post que se obtiene en la base de datos
-html += `<li><h2>${title}</h2></li>
-<li>${post}</li>`;
+// Pinto los post que se obtiene en l
+html += `<li><span class='title'>${title}</span>
+<p>${post}</p></li>`;
 });
 post.innerHTML = html;
 
 });
 
 }
-
-
 
 const posts =()=> {
   let post = document.getElementById('post');
@@ -71,7 +62,7 @@ const posts =()=> {
   let massagepost = massage.value;
   // console.log(massagepost);
   // Pinto en una tabla los post
-   post.innerHTML += `  <li><h2>${titlePost}</h2></li>
+   post.innerHTML += `<li><h2>${titlePost}</h2></li>
    <li>${massagepost}</li>`;
 
 firebase.database().ref('posts').push({
@@ -79,16 +70,15 @@ firebase.database().ref('posts').push({
   post: massagepost
 
 });
+//termina modifico mir
 updatepost();
-titlePost ='';
-massagepost='';
+title.value ='';
+massage.value ='';
 }
-
 
 window.onload = updatepost();
 // Post button
 let btnpost = document.getElementById('btnpost');
-
 
 // Button logout
 let unsesion = document.getElementById("logout");
