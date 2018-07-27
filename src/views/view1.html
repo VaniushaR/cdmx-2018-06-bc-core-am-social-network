@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,6 +13,7 @@
     <link rel="stylesheet" type="text/css" media="screen" href="../css/main.css" />
     <!--<ul id="nav-mobile" class="right hide-on-med-and-down"> -->
 </head>
+
 <body>
     <div class="container">
         <!-- Maquetado de Timeline para post-->
@@ -26,13 +28,13 @@
                         <div class="background">
                             <img src="../images/chile.jpg">
                         </div>
-                        <a href="#user" id= "iconuser">
+                        <a href="#user" id="iconuser">
 
                         </a>
                         <a href="#name" id="name">
                             <span class="white-text name">John Doe</span>
                         </a>
-                        <a href="#email" id= "email">
+                        <a href="#email" id="email">
 
                         </a>
                     </div>
@@ -43,13 +45,16 @@
                             <div class="card aboutme-card">
                                 <div class="card-content  red-accent-4-text aboutme-card">
                                     <span class="card-title">Acerca de mí</span>
-                                    <p>Soy una muchacha</p>
+                                    <!-- Aqui empezo a codear MIR -->
+                                    <p id="perfil"> Escribe sobre tí</p>
                                 </div>
                                 <div class="card-action">
-                                    <a href="#">Guardar</a>
-                                    <a href="#">
+                                    <!-- <a href="#">
+                                        <i class="material-icons">done</i></a> -->
+                                    <a id= "btn-edit" href="#">
                                         <i class="material-icons">edit</i>
                                     </a>
+                                    <!-- Aqui termino MIR -->
                                 </div>
                             </div>
                         </div>
@@ -111,10 +116,10 @@
                 <div class="col s12 m12 l12">
                     <div class="card">
                         <div class="card-image">
-                      <input type="text" id="title" placeholder="Titulo de la receta">
+                            <input type="text" id="title" placeholder="Titulo de la receta">
                         </div>
                         <div class="card-content">
-                          <input type="text" id="recipe" placeholder="Publica Alguna Receta">
+                            <input type="text" id="recipe" placeholder="Publica Alguna Receta">
                         </div>
                         <div class="card-action">
                             <a href="#">
@@ -124,23 +129,24 @@
                         </div>
                     </div>
                     <!--Aqui se pinta las recetas-->
-                <div  id="post">
-                </div>
+                    <div id="post">
+                    </div>
                 </div>
             </div>
 
         </section>
-</div>
-        <!--End of TimeLine-->
-        <!-- Get Firebase -->
-        <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
-        <!--JQuery para menú desplegable-->
-        <script src="https://code.jquery.com/jquery-2.1.1.min.js"> </script>
-        <!-- Compiled and minified JavaScript -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
-   <script src="../js/drawnProfile.js"></script>
-  <script type="text/javascript" src="../js/data.js"></script>
-  <script type="text/javascript" src="../js/posts.js"></script>
+    </div>
+    <!--End of TimeLine-->
+    <!-- Get Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+    <!--JQuery para menú desplegable-->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"> </script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+    <script src="../js/drawnProfile.js"></script>
+    <script type="text/javascript" src="../js/data.js"></script>
+    <script type="text/javascript" src="../js/posts.js"></script>
 
 </body>
+
 </html>
