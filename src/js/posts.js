@@ -18,7 +18,7 @@ firebase.auth().onAuthStateChanged(user => {
     let user = firebase.auth().currentUser;
     if (user !== null) {
       profileuser(user);
-      //adduser(user);
+      adduser(user);
       // Reference
 
     // child_added:
@@ -45,14 +45,13 @@ const getpost = ()=> {
 let html = '';
 let user = firebase.auth().currentUser;
 firebase.database().ref('user/posts').on('value', snapshot => {
-
     snapshot.forEach(event => {
       let element = event.val();
       let title = element.title;
       let photo = element.photo;
       console.log(title);
       let post = element.post;
-      //let post = element.posts;
+      // let post = element.posts;
       html += `<ul class ='collection'><li class = 'collection-item avatar'>
       <img src='${photo}' class='circle'>
       <span class = 'title'>${title}</span>
@@ -87,7 +86,7 @@ const posts = () => {
   massage.value = '';
 };
 
-window.onload = getpost();
+ window.onload = getpost();
 // Post button
 let btnpost = document.getElementById('btnpost');
 
