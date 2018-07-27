@@ -12,3 +12,4 @@ describe('network', () => {
     assert.isFunction(network.loginFacebook);
   });
 });
+
