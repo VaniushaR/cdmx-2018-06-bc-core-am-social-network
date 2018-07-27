@@ -10,7 +10,7 @@ window.network = {
         storageBucket: "red-social-4ed2d.appspot.com",
         messagingSenderId: "704831096005"
     };
-    firebase.initializeApp(config);
+firebase.initializeApp(config);
   },
   // Sing In with Google
   loginGoogle: () => {
