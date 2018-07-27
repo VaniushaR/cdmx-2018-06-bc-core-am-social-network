@@ -21,7 +21,6 @@ Sign in
 `;
 };
 
-
 drawlogin();
 
 // Entrar a la Database
@@ -31,26 +30,27 @@ firebase.auth().onAuthStateChanged(user => {
     let user = firebase.auth().currentUser;
     if (user != null) {
       let email_id = user.email;
-      location.href = ('views/view1.html');
+      location.href = 'views/view1.html';
     }
   } else {
-
-
   }
 });
 
-const getdata =()=> {
-const mail = document.getElementById('email');
-const password = document.getElementById('password');
-const nick = document.getElementById('nick');
+const getdata = () => {
+  const mail = document.getElementById('email');
+  const password = document.getElementById('password');
+  const nick = document.getElementById('nick');
 
-firebase.auth().signInWithEmailAndPassword(mail.value, password.value).catch(error=> {
-  // Handle Errors here.
-  var errorCode = error.code;
-  var errorMessage = error.message;
-  alert("Error "+ errorMessage);
-  // ...
-});
+  firebase
+    .auth()
+    .signInWithEmailAndPassword(mail.value, password.value)
+    .catch(error => {
+      // Handle Errors here.
+      var errorCode = error.code;
+      var errorMessage = error.message;
+      alert('Error ' + errorMessage);
+      // ...
+    });
 
   firebase
     .auth()
@@ -59,19 +59,18 @@ firebase.auth().signInWithEmailAndPassword(mail.value, password.value).catch(err
       // Handle Errors here.
       var errorCode = error.code;
       var errorMessage = error.message;
-      alert("Error " + errorMessage);
+      alert('Error ' + errorMessage);
       // ...
     });
 };
 
-
-let sesion = document.getElementById("sesion");
-sesion.addEventListener("click",getdata);
+let sesion = document.getElementById('sesion');
+sesion.addEventListener('click', getdata);
 let google = document.getElementById('sesionGoogle');
 google.addEventListener('click', event => {
-network.loginGoogle();
-    });
+  network.loginGoogle();
+});
 let facebook = document.getElementById('sesionFacebook');
-  facebook.addEventListener('click', event => {
+facebook.addEventListener('click', event => {
   network.loginFacebook();
-      });
+});

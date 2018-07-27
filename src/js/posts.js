@@ -19,6 +19,7 @@ firebase.auth().onAuthStateChanged(user => {
       profileuser(user);
       adduser(user);
       // Reference
+
       // child_added:
       // child_changed:
       // child_remove:
@@ -28,64 +29,75 @@ firebase.auth().onAuthStateChanged(user => {
 });
 const adduser = usuario => {
   let database = firebase.database();
-  const addUser = (uid, name) => {
-    let conected = userConnect.push({
-      uid: uid,
-      name: name
-    });
+  let user = {
+    uid: usuario.uid,
+    name: usuario.displayName,
+    mail: usuario.email,
+    photo: usuario.photoURL
   };
 
-  const getpost = () => {
-    let html = '';
-    firebase
-      .database()
-      .ref('user/posts')
-      .on('value', snapshot => {
-        snapshot.forEach(e => {
-          let element = e.val();
-          let title = element.title;
-          let post = element.post;
-          // Pinto los post que se obtiene en la base de datos
-          html += `<li><h2>${title}</h2></li>
-<li>${post}</li>`;
-        });
-        post.innerHTML = html;
-      });
-  };
-
-  const posts = () => {
-    let post = document.getElementById('post');
-    let title = document.getElementById('title');
-    let massage = document.getElementById('recipe');
-    let titlePost = title.value;
-    // console.log(titlePost);
-    let massagepost = massage.value;
-    // console.log(massagepost);
-    // Pinto en una tabla los post
-    post.innerHTML += `<ul class='collection'><li class='collection-item avatar'><span class='title'>${titlePost}</span>
-<p>${massagepost}</p></li></ul>`;
-    firebase
-      .database()
-      .ref(`user/posts`)
-      .push({
-        ui: user.uid,
-        name: user.displayName,
-        photo: user.photoURL,
-        title: titlePost,
-        post: massagepost
-      });
-    // termina modifico mir
-    getpost();
-    title.value = '';
-    massage.value = '';
-  };
-
-  window.onload = getpost();
-  // Post button
-  let btnpost = document.getElementById('btnpost');
-
-  btnpost.addEventListener('click', posts);
-  // Button logout
-  let unsesion = document.getElementById('logout');
-  unsesion.addEventListener('click', logout);
+  firebase
+    .database()
+    .ref(`user/${user.uid}`)
+    .set(user);
 };
+// Function for update post
+const getpost = () => {
+  let html = '';
+  let user = firebase.auth().currentUser;
+  firebase
+    .database()
+    .ref('user/posts')
+    .on('value', snapshot => {
+      snapshot.forEach(event => {
+        let element = event.val();
+        let title = element.title;
+        let photo = element.photo;
+        console.log(title);
+        let post = element.post;
+        // let post = element.posts;
+        html += `<ul class ='collection'><li class = 'collection-item avatar'>
+      <img src='${photo}' class='circle'>
+      <span class = 'title'>${title}</span>
+<p></p>${post}</li></ul>`;
+      });
+      post.innerHTML = html;
+    });
+};
+
+const posts = () => {
+  let user = firebase.auth().currentUser;
+  let post = document.getElementById('post');
+  let title = document.getElementById('title');
+  let massage = document.getElementById('recipe');
+  let titlePost = title.value;
+  // console.log(titlePost);
+  let massagepost = massage.value;
+  // console.log(massagepost);
+  // Pinto en una tabla los post
+  post.innerHTML += `<ul class='collection'><li class='collection-item avatar'><span class='title'>${titlePost}</span>
+<p>${massagepost}</p></li></ul>`;
+  firebase
+    .database()
+    .ref(`user/posts`)
+    .push({
+      ui: user.uid,
+      name: user.displayName,
+      photo: user.photoURL,
+      title: titlePost,
+      post: massagepost
+    });
+  // termina modifico mir
+  getpost();
+  title.value = '';
+  massage.value = '';
+};
+
+window.onload = getpost();
+// Post button
+let btnpost = document.getElementById('btnpost');
+
+btnpost.addEventListener('click', posts);
+// Button logout
+let unsesion = document.getElementById('logout');
+unsesion.addEventListener('click', logout);
