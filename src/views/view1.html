@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,6 +13,7 @@
     <link rel="stylesheet" type="text/css" media="screen" href="../css/main.css" />
     <!--<ul id="nav-mobile" class="right hide-on-med-and-down"> -->
 </head>
+
 <body>
     <div class="container">
         <!-- Maquetado de Timeline para post-->
@@ -33,6 +35,7 @@
                             <span class="white-text name">John Doe</span>
                         </a>
                         <a href="#email" id="email">
+
                         </a>
                     </div>
                 </li>
@@ -42,13 +45,16 @@
                             <div class="card aboutme-card">
                                 <div class="card-content  red-accent-4-text aboutme-card">
                                     <span class="card-title">Acerca de mí</span>
-                                    <p>Soy una muchacha</p>
+                                    <!-- Aqui empezo a codear MIR -->
+                                    <p id="perfil"> Escribe sobre tí</p>
                                 </div>
                                 <div class="card-action">
-                                    <a href="#">Guardar</a>
-                                    <a href="#">
+                                    <!-- <a href="#">
+                                        <i class="material-icons">done</i></a> -->
+                                    <a id= "btn-edit" href="#">
                                         <i class="material-icons">edit</i>
                                     </a>
+                                    <!-- Aqui termino MIR -->
                                 </div>
                             </div>
                         </div>
@@ -106,10 +112,10 @@
                 <div class="col s12 m12 l12">
                     <div class="card">
                         <div class="card-image">
-                      <input type="text" id="title" placeholder="Titulo de la receta">
+                            <input type="text" id="title" placeholder="Titulo de la receta">
                         </div>
                         <div class="card-content">
-                          <input type="text" id="recipe" placeholder="Publica Alguna Receta">
+                            <input type="text" id="recipe" placeholder="Publica Alguna Receta">
                         </div>
                         <div class="card-action">
                             <a href="#">
@@ -119,8 +125,8 @@
                         </div>
                     </div>
                     <!--Aqui se pinta las recetas-->
-                <div  id="post">
-                </div>
+                    <div id="post">
+                    </div>
                 </div>
             </div>
         </section>
