@@ -42,3 +42,27 @@ h4 {
   color: black;
   padding: 0%;
 }
+#ranking {
+  width: 100%;
+  margin: 20px auto;
+  text-align: center;
+}
+
+#bar {
+  margin: 0 auto;
+  width: 100%;
+}
+
+#likes {
+  height: 15px;
+  width: 50%;
+  background-color: #41bb9a;
+  float: left;
+}
+
+#dislikes {
+  height: 15px;
+  width: 50%;
+  background-color: red;
+  float: right;
+}

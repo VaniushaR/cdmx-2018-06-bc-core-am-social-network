@@ -113,28 +113,24 @@
                     <li class="col s4 m4 l4">
                         <a>
                             <i id="add-photo" class="material-icons">add_a_photo
-
                             </i>
                         </a>
                     </li>
                     <li>
                         <a>
                             <i id="add-recipe" class="material-icons">free_breakfast
-
                             </i>
                         </a>
                     </li>
                     <li>
                         <a>
                             <i id="add-place" class="material-icons">add_location
-
                             </i>
                         </a>
                     </li>
                 </ul>
             </nav>
         </section>
-
         <section>
             <div class="row">
                 <div class="col s12 m12 l12">
@@ -185,7 +181,20 @@
                             <h4>Descripción</h4>
                             <p>Hermoso lugar tipo buffete de ambiente familiar. Adornado y colorido como fiesta mexicana.</p>
                             <h4>Ranking</h4>
+                            <div id="ranking">
+                                <div id="bar">
+                                    <div id="likes"> </div>
+                                    <div id="dislikes"> </div>
+                                </div>
+                            </div>
+                            <div class="divider"></div>
+                            <div id="ranking-buttons">
+                                <i class="waves-effect waves-red btn right material-icons" onclick="dislike();">thumb_down</i>
+                                <i class="waves-effect waves-yellow btn right material-icons" onclick="like();">thumb_up</i>
+                            </div>
+                            <div class="divider"></div>
                             <p>¿Te gustó este lugar?</p>
+                            <div class="divider"></div>
                             <!--Desplegable para comentarios del post-->
                             <ul class="collapsible">
                                 <li>
