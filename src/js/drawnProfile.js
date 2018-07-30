@@ -15,6 +15,23 @@ $(document).ready(function() {
   $('.collapsible').collapsible();
 });
 
+//actication of collapsible add buttons to show the format for places, photos and recipes
+$(document).ready(function() {
+  $('add-photo').click(function() {
+    $('photo-format').slideToggle('slow');
+  });
+});
+$(document).ready(function() {
+  $('add-place').click(function() {
+    $('place-format').slideToggle('slow');
+  });
+});
+$(document).ready(function() {
+  $('add-recipe').click(function() {
+    $('recipe-format').slideToggle('slow');
+  });
+});
+
 const btnEditPerfil = document.getElementById('btn-edit');
 let editDescription = document.getElementById('perfil');
 

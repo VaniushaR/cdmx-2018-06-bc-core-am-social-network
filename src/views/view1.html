@@ -85,7 +85,7 @@
                     <h4>Mexican Food Lovers</h4>
                 </a>
                 <div class="divider"></div>
-                <a href="badges.html" class="center-align col s2 m2 l2 fixed-navbar">
+                <a id="flip" class="center-align col s2 m2 l2 fixed-navbar">
                     <i class="material-icons icon-pad">add_circle_outline</i>
                 </a>
                 <div class="divider"></div>
@@ -94,7 +94,7 @@
                     <div class="nav-wrapper">
                         <form>
                             <div class="input-field">
-                                <input id="search" type="search" required>
+                                <input id="search" type="search" placeholder="buscar un platillo, ingrediente o lugar..." required>
                                 <label class="label-icon" for="search">
                                     <i class="material-icons">search</i>
                                 </label>
@@ -107,6 +107,32 @@
             </section>
         </header>
         <!-- End of the navigation profile side bar-->
+        <section id="panel">
+            <div>
+                <li>
+                    <a>
+                        <i id="add-photo" class="material-icons">add_a_photo
+
+                        </i>
+                    </a>
+                </li>
+                <li>
+                    <a>
+                        <i id="add-recipe" class="material-icons">free_breakfast
+
+                        </i>
+                    </a>
+                </li>
+                <li>
+                    <a>
+                        <i id="add-place" class="material-icons">add_location
+
+                        </i>
+                    </a>
+                </li>
+            </div>
+        </section>
+
         <section>
             <div class="row">
                 <div class="col s12 m12 l12">
@@ -132,7 +158,7 @@
         </section>
         <!--Post Lugares-->
         <section>
-            <div class="row">
+            <div class="row" id="place-format">
                 <div class="col s12 m12 l12">
                     <div class="card">
                         <span>
@@ -184,8 +210,6 @@
                                             </p>
                                         </span>
                                         <div class="divider"></div>
-
-
                                     </div>
                                 </li>
                             </ul>
