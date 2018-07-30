@@ -1,12 +1,21 @@
-// side navbar iniatization with JQuery
+
+//side navbar iniatization with JQuery
 $(document).ready(function() {
   $('.sidenav').sidenav();
 });
-// end of the navbar activation
 
+//activation of side down panel display
+$(document).ready(function() {
+  $('#flip').click(function() {
+    $('#panel').slideToggle('slow');
+  });
+});
 
-// *********************************************** */
-// Aqui empezo a codear Mir.
+//activation of collapsible and expanded accordion for coments and opinions
+$(document).ready(function() {
+  $('.collapsible').collapsible();
+});
+
 
 // llamdo del DOM
 const btnEditPerfil = document.getElementById('btn-edit');
@@ -62,6 +71,7 @@ const editAboutMe = () => {
   btnEditPerfil.style.display = 'none';
 };
 btnEditPerfil.addEventListener('click', editAboutMe);
+
 
 // Función del boton salvar el nuevo perfil
 const saveNewAboutMe = () => {

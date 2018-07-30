@@ -1,5 +1,4 @@
-
-const profileuser = (user)=> {
+const profileuser = user => {
   let name = document.getElementById('name');
   let email = document.getElementById('email');
   let icon = document.getElementById('iconuser');
@@ -9,7 +8,7 @@ const profileuser = (user)=> {
 };
 const logout = () => {
   firebase.auth().signOut();
-  location.href = ('../index.html');
+  location.href = '../index.html';
 };
 
 firebase.auth().onAuthStateChanged(user => {
@@ -21,44 +20,49 @@ firebase.auth().onAuthStateChanged(user => {
       adduser(user);
       // Reference
 
-    // child_added:
-    // child_changed:
-    // child_remove:
+      // child_added:
+      // child_changed:
+      // child_remove:
     }
   } else {
   }
 });
-const adduser =(usuario)=> {
-let database = firebase.database();
-let user = {
-  uid: usuario.uid,
-  name: usuario.displayName,
-  mail: usuario.email,
-  photo: usuario.photoURL
-}
+const adduser = usuario => {
+  let database = firebase.database();
+  let user = {
+    uid: usuario.uid,
+    name: usuario.displayName,
+    mail: usuario.email,
+    photo: usuario.photoURL
+  };
 
-firebase.database().ref(`user/${user.uid}`).set(user);
-
-}
+  firebase
+    .database()
+    .ref(`user/${user.uid}`)
+    .set(user);
+};
 // Function for update post
-const getpost = ()=> {
-let html = '';
-let user = firebase.auth().currentUser;
-firebase.database().ref('user/posts').on('value', snapshot => {
-    snapshot.forEach(event => {
-      let element = event.val();
-      let title = element.title;
-      let photo = element.photo;
-      console.log(title);
-      let post = element.post;
-      // let post = element.posts;
-      html += `<ul class ='collection'><li class = 'collection-item avatar'>
+const getpost = () => {
+  let html = '';
+  let user = firebase.auth().currentUser;
+  firebase
+    .database()
+    .ref('user/posts')
+    .on('value', snapshot => {
+      snapshot.forEach(event => {
+        let element = event.val();
+        let title = element.title;
+        let photo = element.photo;
+        console.log(title);
+        let post = element.post;
+        // let post = element.posts;
+        html += `<ul class ='collection'><li class = 'collection-item avatar'>
       <img src='${photo}' class='circle'>
       <span class = 'title'>${title}</span>
 <p></p>${post}</li></ul>`;
+      });
+      post.innerHTML = html;
     });
-    post.innerHTML = html;
-  });
 };
 
 const posts = () => {
@@ -73,20 +77,23 @@ const posts = () => {
   // Pinto en una tabla los post
   post.innerHTML += `<ul class='collection'><li class='collection-item avatar'><span class='title'>${titlePost}</span>
 <p>${massagepost}</p></li></ul>`;
-  firebase.database().ref(`user/posts`).push({
-    ui: user.uid,
-    name: user.displayName,
-    photo: user.photoURL,
-    title: titlePost,
-    post: massagepost
-  });
+  firebase
+    .database()
+    .ref(`user/posts`)
+    .push({
+      ui: user.uid,
+      name: user.displayName,
+      photo: user.photoURL,
+      title: titlePost,
+      post: massagepost
+    });
   // termina modifico mir
   getpost();
   title.value = '';
   massage.value = '';
 };
 
- window.onload = getpost();
+window.onload = getpost();
 // Post button
 let btnpost = document.getElementById('btnpost');
 

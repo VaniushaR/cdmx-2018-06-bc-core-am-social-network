@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,9 +11,7 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" type="text/css" media="screen" href="../css/main.css" />
   <!--<ul id="nav-mobile" class="right hide-on-med-and-down"> -->
-
 </head>
-
 <body>
   <div class="container">
     <!-- Maquetado de Timeline para post-->
@@ -51,102 +48,162 @@
                 </div>
                 <div class="card-action">
                   <!-- <a href="#">
-                                        <i class="material-icons">done</i></a> -->
+                 <i class="material-icons">done</i></a> -->
+
+                                    <a id="btn-edit" href="#">
+                                        <i class="material-icons">edit</i>
+                                    </a>
+                                    <!-- Aqui termino MIR -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="#!">
+                        <i class="material-icons red-text text-accent-4">favorite</i>Mis recetas favoritas</a>
+                </li>
+                <li>
+                    <a href="#!">
+                        <i class="material-icons red-text text-accent-4">favorite</i>Mis lugares favoritos</a>
+                </li>
+                <li>
+                    <div class="divider"></div>
+                </li>
+                <li>
+                    <a id="logout" class="waves-effect waves-light btn-small">
+                        <i class="material-icons right">exit_to_app </i>Log Out</a>
+                </li>
+            </ul>
+            <section>
+                <a href="#" data-target="slide-out" class="sidenav-trigger center-align col s2 m2 l2 fixed-navbar">
+                    <i class="material-icons icon-pad">face</i>
+                </a>
+                <div class="divider"></div>
+                <a href="#" class="center-align col s8 m8 l8 fixed-navbar">
+                    <h4>Mexican Food Lovers</h4>
+                </a>
+                <div class="divider"></div>
+                <a href="badges.html" class="center-align col s2 m2 l2 fixed-navbar">
+                    <i class="material-icons icon-pad">add_circle_outline</i>
+                </a>
+                <div class="divider"></div>
+                <nav class="fixed-navbar center-align col s12 m12 l12  fixed-navbar">
+                    <div class="divider"></div>
+                    <div class="nav-wrapper">
+                        <form>
+                            <div class="input-field">
+                                <input id="search" type="search" required>
+                                <label class="label-icon" for="search">
+                                    <i class="material-icons">search</i>
+                                </label>
+                                <i class="material-icons">close</i>
+                            </div>
+                        </form>
+                    </div>
+                </nav>
+                <div class="divider"></div>
+            </section>
+        </header>
+        <!-- End of the navigation profile side bar-->
+        <section>
+            <div class="row">
+                <div class="col s12 m12 l12">
+                    <div class="card">
+                        <div class="card-image">
+                            <input type="text" id="title" placeholder="Titulo de la receta">
+                        </div>
+                        <div class="card-content">
+                            <input type="text" id="recipe" placeholder="Publica Alguna Receta">
+                        </div>
+                        <div class="card-action">
+                            <a href="#">
+                                <a class="waves-effect waves-light btn" id="btnpost">
+                                    <i class="material-icons right"></i>Publicar Receta</a>
+                            </a>
+                        </div>
+                    </div>
+                    <!--Aqui se pinta las recetas-->
+                    <div id="post">
+                    </div>
                   <a id="btn-edit" href="#">
                     <i class="material-icons">edit</i>
                   </a>
                   <!-- Aqui termino MIR -->
+        </section>
+        <!--Post Lugares-->
+        <section>
+            <div class="row">
+                <div class="col s12 m12 l12">
+                    <div class="card">
+                        <span>
+                            <div class="card-image">
+                                <a class="btn-floating right waves-effect waves-light red">
+
+                                    <i class="material-icons">place</i>
+                                </a>
+                                <img src="../images/laSazonTlalpn.jpg">
+                        </span>
+                        <span class="card-title">
+                            <h4 class="white-text">La Sazón </h4>
+                        </span>
+
+                        <a class="btn-floating halfway-fab waves-effect waves-light gray">
+                            <i class="material-icons grey">favorite</i>
+                        </a>
+                        </div>
+                        <div class="card-content">
+                            <h4>Ubicación</h4>
+                            <p>No. 132, Calle Hidalgo, Tlalpan Centro, CDMX.</p>
+                            <h4>Descripción</h4>
+                            <p>Hermoso lugar tipo buffete de ambiente familiar. Adornado y colorido como fiesta mexicana.</p>
+                            <h4>Ranking</h4>
+                            <p>¿Te gustó este lugar?</p>
+                            <!--Desplegable para comentarios del post-->
+                            <ul class="collapsible">
+                                <li>
+                                    <div class="collapsible-header">
+                                        <i class="material-icons">chat</i>Opinar sobre este lugar</div>
+                                    <div class="collapsible-body">
+                                        <span>
+                                            <input placeholder="Escribe tu opinión...">
+                                            <a class="waves-effect waves-light btn right">
+                                                <i class="material-icons right">rate_review</i>Enviar</a>
+                                        </span>
+                                        <div class="divider"></div>
+                                        <span>
+                                            <i class="material-icons">chat_bubble_outline</i>
+                                            <p>
+                                                comentario: Me gustó mucho...
+                                            </p>
+                                        </span>
+                                        <div class="divider"></div>
+                                        <span>
+                                            <i class="material-icons">chat_bubble_outline</i>
+                                            <p>
+                                                comentario: Me gustó mucho...
+                                            </p>
+                                        </span>
+                                        <div class="divider"></div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-              </div>
             </div>
-          </div>
-        </li>
-        <li>
-          <a href="#!">
-            <i class="material-icons red-text text-accent-4">favorite</i>Mis recetas favoritas</a>
-        </li>
-        <li>
-          <a href="#!">
-            <i class="material-icons red-text text-accent-4">favorite</i>Mis lugares favoritos</a>
-        </li>
-        <li>
-          <div class="divider"></div>
-        </li>
-        <li>
-          <a id="logout" class="waves-effect waves-light btn-small">
-            <i class="material-icons right">exit_to_app </i>Log Out</a>
-        </li>
-      </ul>
-      <section>
-        <a href="#" data-target="slide-out" class="sidenav-trigger center-align col s2 m2 l2 fixed-navbar">
-          <i class="material-icons icon-pad">face</i>
-        </a>
-        <div class="divider"></div>
-        <a href="#" class="center-align col s8 m8 l8 fixed-navbar">
-          <h4>Mexican Food Lovers</h4>
-        </a>
-        <div class="divider"></div>
-        <a href="badges.html" class="center-align col s2 m2 l2 fixed-navbar">
-          <i class="material-icons icon-pad">add_circle_outline</i>
-        </a>
-        <div class="divider"></div>
-        <nav class="fixed-navbar center-align col s12 m12 l12  fixed-navbar">
-          <div class="divider"></div>
-          <div class="nav-wrapper">
-            <form>
-              <div class="input-field">
-                <input id="search" type="search" required>
-                <label class="label-icon" for="search">
-                  <i class="material-icons">search</i>
-                </label>
-                <i class="material-icons">close</i>
-              </div>
-            </form>
-          </div>
-        </nav>
-        <div class="divider"></div>
-      </section>
-    </header>
-    <!-- End of the navigation profile side bar-->
-    <section>
-      <div class="row">
-        <div class="col s12 m12 l12">
-          <div class="card">
-            <div class="card-image">
-              <input type="text" id="title" placeholder="Titulo de la receta">
-            </div>
-            <div class="card-content">
-              <input type="text" id="recipe" placeholder="Publica Alguna Receta">
-            </div>
-            <div class="card-action">
-              <a href="#">
-                <a class="waves-effect waves-light btn" id="btnpost">
-                  <i class="material-icons right"></i>Publicar Receta</a>
-              </a>
-            </div>
-          </div>
-          <!--Aqui se pinta las recetas-->
-          <div id="post">
-          </div>
-        </div>
-      </div>
-    </section>
-  </div>
-  <!--End of TimeLine-->
-  <!-- Get Firebase -->
-  <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
-  <!--JQuery para menú desplegable-->
-  <script src="https://code.jquery.com/jquery-2.1.1.min.js">
-
-
-  </script>
-  <!-- Compiled and minified JavaScript -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
-  <script src="../js/drawnProfile.js"></script>
-  <script type="text/javascript" src="../js/data.js"></script>
-  <script type="text/javascript" src="../js/posts.js"></script>
-  <!-- aqui agregue el script para el popup -->
-  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        </section>
+    </div>
+    <!--End of TimeLine-->
+    <!-- Get Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+    <!--JQuery para menú desplegable-->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"> </script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+    <script src="../js/drawnProfile.js"></script>
+    <script type="text/javascript" src="../js/data.js"></script>
+    <script type="text/javascript" src="../js/posts.js"></script>
 </body>
-
 </html>
+
