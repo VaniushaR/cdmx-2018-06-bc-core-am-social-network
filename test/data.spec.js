@@ -25,6 +25,7 @@ describe('Perfil', () => {
   it('Deberia mostrar sus lugares favoritas.', () => {});
 });
 
+
 describe('Post', () => {
   it('Debería mostrar datos de Usuario.', () => {});
   it('Debería dejar al usuario postear una entrada.', () => {});
@@ -37,3 +38,4 @@ describe('Post', () => {
     it('Debería hacer un filtro que solo te muestre los comentarios tipo "Lugar".', () => {});
   });
 });
+

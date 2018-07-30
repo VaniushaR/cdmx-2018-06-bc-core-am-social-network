@@ -1,4 +1,7 @@
 # Aqui debes poner los archivos que no quieras que se suban a Github
+
+node_modules
+package-lock.json
 node_modules
 package-lock.json
 .DS_Store
