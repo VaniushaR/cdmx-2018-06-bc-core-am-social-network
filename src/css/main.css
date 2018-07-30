@@ -36,3 +36,9 @@ h4 {
 #submenu {
   background-color: aqua;
 }
+#card-padding {
+  background-color: #f9f888;
+  font-family: 'Oswald', sans-serif;
+  color: black;
+  padding: 0%;
+}

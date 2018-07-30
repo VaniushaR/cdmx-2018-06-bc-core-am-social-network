@@ -10,6 +10,11 @@ $(document).ready(function() {
   });
 });
 
+//activation of collapsible and expanded accordion for coments and opinions
+$(document).ready(function() {
+  $('.collapsible').collapsible();
+});
+
 const btnEditPerfil = document.getElementById('btn-edit');
 let editDescription = document.getElementById('perfil');
 
