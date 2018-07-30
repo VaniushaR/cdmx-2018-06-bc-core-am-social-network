@@ -21,11 +21,13 @@ $(document).ready(function() {
     $('photo-format').slideToggle('slow');
   });
 });
+
 $(document).ready(function() {
   $('add-place').click(function() {
     $('place-format').slideToggle('slow');
   });
 });
+
 $(document).ready(function() {
   $('add-recipe').click(function() {
     $('recipe-format').slideToggle('slow');
