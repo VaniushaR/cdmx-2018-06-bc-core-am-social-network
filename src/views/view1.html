@@ -13,6 +13,7 @@
     <link rel="stylesheet" type="text/css" media="screen" href="../css/main.css" />
     <!--<ul id="nav-mobile" class="right hide-on-med-and-down"> -->
 </head>
+
 <body>
     <div class="container">
         <!-- Maquetado de Timeline para post-->
@@ -34,6 +35,7 @@
                             <span class="white-text name">John Doe</span>
                         </a>
                         <a href="#email" id="email">
+
                         </a>
                     </div>
                 </li>
@@ -49,7 +51,7 @@
                                 <div class="card-action">
                                     <!-- <a href="#">
                                         <i class="material-icons">done</i></a> -->
-                                    <a id= "btn-edit" href="#">
+                                    <a id="btn-edit" href="#">
                                         <i class="material-icons">edit</i>
                                     </a>
                                     <!-- Aqui termino MIR -->
@@ -83,7 +85,7 @@
                     <h4>Mexican Food Lovers</h4>
                 </a>
                 <div class="divider"></div>
-                <a href="badges.html" class="center-align col s2 m2 l2 fixed-navbar">
+                <a id="flip" class="center-align col s2 m2 l2 fixed-navbar">
                     <i class="material-icons icon-pad">add_circle_outline</i>
                 </a>
                 <div class="divider"></div>
@@ -92,7 +94,7 @@
                     <div class="nav-wrapper">
                         <form>
                             <div class="input-field">
-                              <input id="search" type="search" required>
+                                <input id="search" type="search" placeholder="buscar un platillo, ingrediente o lugar..." required>
                                 <label class="label-icon" for="search">
                                     <i class="material-icons">search</i>
                                 </label>
@@ -105,182 +107,130 @@
             </section>
         </header>
         <!-- End of the navigation profile side bar-->
+        <section id="panel">
+            <nav>
+                <ul class="col s12 m12 l12">
+                    <li class="col s4 m4 l4">
+                        <a>
+                            <i id="add-photo" class="material-icons">add_a_photo
+
+                            </i>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <i id="add-recipe" class="material-icons">free_breakfast
+
+                            </i>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <i id="add-place" class="material-icons">add_location
+
+                            </i>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </section>
+
         <section>
-  <section class="input-field col s10">
-  <select id="choose-post">
-    <option value="" disabled selected>Escoge una de las opciones</option>
-    <option value="Recetas">Recetas</option>
-    <option value="Lugares">Lugares</option>
-  </select>
-  <label>¿Qué quieres compartir?</label>
-</section>
-          <section class="row" id="form-recipe">
-                <form class="col s12 m12 l12 hoverable">
-                  <section class="input-field col s8 m8 l8">
-                      <input type="text"  id="input_text" placeholder="Titulo de la receta" data-length="25">
-                      <label for="input_text">Titulo de la Receta</label>
-                    </section>
-                    <section class="input-field col s8 m8 l8">
-                    <input type="text"  id="count" placeholder="¿Cúantas personas?" min="1" max="10">
-                    <label for="input_text">Número de persona</label>
-                      </section>
-                      <div class="input-field col s12 l12">
-                          <select id="ingredients">
-                            <option value="" disabled selected>Elige las opciones</option>
-                              <optgroup label="Chiles">
-                                <option value="Ancho">Ancho</option>
-                                <option>Arbol</option>
-                                <option>Chiles curtidos</option>
-                                <option>Chipotle</option>
-                                <option>Habanero</option>
-                                <option>Jalapeño</option>
-                                <option>Pacilla</option>
-                                <option>Pimiento</option>
-                                <option>Poblano</option>
-                                <option>Serrano</option>
-                                <option>Tajín</option>
-                                </optgroup>
-                                  <optgroup label="Verduras">
-                                    <option value="Aguacate">Aguacate</option>
-                                    <option>Apio</option>
-                                    <option>Berenjena</option>
-                                    <option value="Calabaza">Calabaza</option>
-                                    <option>Cebolla</option>
-                                    <option>Cebolla Morada</option>
-                                    <option>Chayote</option>
-                                    <option>Champiñones</option>
-                                    <option>Coliflor</option>
-                                    <option>Jicama</option>
-                                    <option>Ejote</option>
-                                    <option>Elote</option>
-                                    <option>Lechuga</option>
-                                    <option>Limón</option>
-                                    <option>Pepino</option>
-                                    <option>Papa</option>
-                                    <option>Rabano</option>
-                                    <option>Silantro</option>
-                                    <option>Tomate</option>
-                                    <option>Tomate Verde</option>
-                                    <option>Zanahoria</option>
-                                  </optgroup>
-                                  <optgroup label="Frutas">
-                                    <option>Cereza</option>
-                                    <option>Ciruela</option>
-                                    <option>Fresa</option>
-                                    <option>Jamaica</option>
-                                    <option>Kiwi</option>
-                                    <option>Mango</option>
-                                    <option>Manzana</option>
-                                    <option>Melón</option>
-                                    <option>Naranja</option>
-                                    <option>Papaya</option>
-                                    <option>Pera</option>
-                                    <option>Piña</option>
-                                    <option>Platano</option>
-                                    <option>Uva</option>
-                                    <option>Sandía</option>
-                                  </optgroup>
-                                  <optgroup label="Carnes">
-                                    <option>Cerdo</option>
-                                    <option>Chorizo</option>
-                                    <option>Huevo</option>
-                                    <option>Jamon</option>
-                                    <option>Peperoni</option>
-                                    <option>Pescado</option>
-                                    <option>Pollo</option>
-                                    <option>Res</option>
-                                    <option>Sanchicha</option>
-                                    <option>Serrano</option>
-                                  </optgroup>
-                                  <optgroup label="Cereales">
-                                    <option>Avena</option>
-                                    <option>Bolillo</option>
-                                    <option>Cacahuates</option>
-                                    <option>Maiz</option>
-                                    <option>Pan Blanco</option>
-                                    <option>Pan Integral</option>
-                                    <option>Pasta</option>
-                                    <option>Tortilla o Tostadas</option>
-                                  </optgroup>
-                                <optgroup label="Lacteos">
-                                  <option>Crema</option>
-                                  <option>Queso</option>
-                                  <option>Leche</option>
-                                  <option>Leche evaporada</option>
-                                  <option>Yogurth</option>
-                                </optgroup>
-                                <optgroup label="Condimentos">
-                                  <option>Ajo</option>
-                                  <option>Aceite</option>
-                                  <option>Azucar</option>
-                                  <option>Canela</option>
-                                  <option>Capsup</option>
-                                  <option>Chocolate</option>
-                                  <option>Clavo</option>
-                                  <option>Mayonesa</option>
-                                  <option>Miel</option>
-                                  <option>Mermelada</option>
-                                  <option>Mostaza</option>
-                                  <option>Pimienta</option>
-                                  <option>Sal</option>
-                                </optgroup>
-                        </select>
-                        <label>Selecciona los Ingredientes...</label>
-                        <textarea id="get-ingredients" class="materialize-textarea"></textarea>
-                      </div>
-                          <section class="input-field col s12 l12">
-                            <textarea id="textarea2" class="materialize-textarea" data-length="120"></textarea>
-                            <label for="textarea2">Indicanos los pasos a seguir</label>
-                          </section>
-                          <section class="col s12 l12">
+            <div class="row">
+                <div class="col s12 m12 l12">
+                    <div class="card">
+                        <div class="card-image">
+                            <input type="text" id="title" placeholder="Titulo de la receta">
+                        </div>
+                        <div class="card-content">
+                            <input type="text" id="recipe" placeholder="Publica Alguna Receta">
+                        </div>
+                        <div class="card-action">
                             <a href="#">
                                 <a class="waves-effect waves-light btn" id="btnpost">
-                                    <i class="material-icons left">restaurant</i>Publicar</a>
+                                    <i class="material-icons right"></i>Publicar Receta</a>
                             </a>
-                            </section>
-                    </form>
-                      <div class="divider"></div>
+                        </div>
+                    </div>
                     <!--Aqui se pinta las recetas-->
-                  </section>
+                    <div id="post">
+                    </div>
+                </div>
+            </div>
         </section>
-        <section id="form-places">
-          <form class="col s12 m12 l12 hoverable">
-            <section class="input-field col s8 m8 l8">
-                <input type="text" id="input_places" placeholder="Escribe el Nombre del Lugar" data-length="25">
-                <label for="input_text">Nombre del Lugar</label>
-              </section>
-              <section class="input-field col s8 m8 l8">
-                  <input type="text" id="input_address" placeholder="Escribe la direccion" data-length="100">
-                  <label for="input_text">Dirección</label>
-                </section>
-                <section class="input-field col s8 m8 l8">
-                    <input type="text" id="input_city" placeholder="Escribe la direccion" data-length="25">
-                    <label for="input_text">Ciudad o Estado</label>
-                  </section>
-                <section class="input-field col s8 m8 l8">
-                    <input type="text" id="input_description" placeholder="Escribe lo genial del lugar" data-length="120">
-                    <label for="input_text">¿Porqué es genial?</label>
-                  </section>
-                  <section class="col s12 l12">
-                    <a href="#">
-                        <a class="waves-effect waves-light btn" id="btnplace">
-                            <i class="material-icons left">add_location</i>Publicar</a>
-                    </a>
-                    </section>
-          </form>
+        <!--Post Lugares-->
+        <section>
+            <div class="row" id="place-format">
+                <div class="col s12 m12 l12">
+                    <div class="card">
+                        <span>
+                            <div class="card-image">
+                                <a class="btn-floating right waves-effect waves-light red">
+
+                                    <i class="material-icons">place</i>
+                                </a>
+                                <img src="../images/laSazonTlalpn.jpg">
+                        </span>
+                        <span class="card-title">
+                            <h4 class="white-text">La Sazón </h4>
+                        </span>
+
+                        <a class="btn-floating halfway-fab waves-effect waves-light gray">
+                            <i class="material-icons grey">favorite</i>
+                        </a>
+                        </div>
+                        <div class="card-content">
+                            <h4>Ubicación</h4>
+                            <p>No. 132, Calle Hidalgo, Tlalpan Centro, CDMX.</p>
+                            <h4>Descripción</h4>
+                            <p>Hermoso lugar tipo buffete de ambiente familiar. Adornado y colorido como fiesta mexicana.</p>
+                            <h4>Ranking</h4>
+                            <p>¿Te gustó este lugar?</p>
+                            <!--Desplegable para comentarios del post-->
+                            <ul class="collapsible">
+                                <li>
+                                    <div class="collapsible-header">
+                                        <i class="material-icons">chat</i>Opinar sobre este lugar</div>
+                                    <div class="collapsible-body">
+                                        <span>
+                                            <input placeholder="Escribe tu opinión...">
+                                            <a class="waves-effect waves-light btn right">
+                                                <i class="material-icons right">rate_review</i>Enviar</a>
+                                        </span>
+                                        <div class="divider"></div>
+                                        <span>
+                                            <i class="material-icons">chat_bubble_outline</i>
+                                            <p>
+                                                comentario: Me gustó mucho...
+                                            </p>
+                                        </span>
+                                        <div class="divider"></div>
+                                        <span>
+                                            <i class="material-icons">chat_bubble_outline</i>
+                                            <p>
+                                                comentario: Me gustó mucho...
+                                            </p>
+                                        </span>
+                                        <div class="divider"></div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
-        <div id="post" class="col s12 l12">
-        </div>
-  </div>
-      <!--End of TimeLine-->
-      <!-- Get Firebase -->
+    </div>
+    <!--End of TimeLine-->
+    <!-- Get Firebase -->
     <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
-        <!--JQuery para menú desplegable-->
+    <!--JQuery para menú desplegable-->
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"> </script>
-        <!-- Compiled and minified JavaScript -->
+    <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
     <script src="../js/drawnProfile.js"></script>
     <script type="text/javascript" src="../js/data.js"></script>
     <script type="text/javascript" src="../js/posts.js"></script>
 </body>
+
 </html>
