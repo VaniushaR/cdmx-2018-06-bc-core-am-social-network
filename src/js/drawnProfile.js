@@ -50,6 +50,7 @@ const editAboutMe = () => {
       <i class = "material-icons ">done</i>
     </a>
   `;
+  // Cambios
   const btnSave = document.getElementById('btn-save');
   btnSave.addEventListener('click', saveNewAboutMe);
 };
