@@ -11,7 +11,6 @@ const logout = () => {
   firebase.auth().signOut();
   location.href = ('../index.html');
 };
-
 firebase.auth().onAuthStateChanged(user => {
   if (user) {
     // User is signed in.
@@ -19,6 +18,8 @@ firebase.auth().onAuthStateChanged(user => {
     if (user !== null) {
       profileuser(user);
       adduser(user);
+      // En la siguiente linea hizo cambios Mir
+      dbaseRef(user);
       // Reference
       // child_added:
     // child_changed:
