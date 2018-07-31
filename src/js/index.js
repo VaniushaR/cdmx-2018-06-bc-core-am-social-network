@@ -21,7 +21,7 @@ Sign in
 `;
 };
 
-drawlogin();
+window.onload = drawlogin();
 
 // Entrar a la Database
 firebase.auth().onAuthStateChanged(user => {

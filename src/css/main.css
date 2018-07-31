@@ -14,6 +14,10 @@
 #titulos2 {
   color: gray;
 }
+form {
+  padding: 10px;
+  margin-bottom: 5px;
+}
 .aboutme-card {
   background-color: #f9f888;
   color: #9e4f13;
@@ -42,3 +46,53 @@ h4 {
   color: black;
   padding: 0%;
 }
+#ranking {
+  width: 100%;
+  margin: 20px auto;
+  text-align: center;
+}
+
+#bar {
+  margin: 0 auto;
+  width: 100%;
+}
+
+#likes {
+  height: 15px;
+  width: 50%;
+  background-color: yellow;
+  float: left;
+}
+
+#dislikes {
+  height: 15px;
+  width: 50%;
+  background-color: red;
+  float: right;
+}
+
+#name-logo {
+  height: 10%;
+  width: 30%;
+}
+/*Francis's Desing*/
+.btn {
+  background-color: #41bb9a !important ;
+}
+.red {
+  background-color: #f34a41 !important ;
+}
+#form-recipe,
+#form-places {
+  display: none;
+}
+
+.card {
+  margin: 10px !important;
+}
+
+.padding-buttons {
+  margin-bottom: 10px !important;
+  padding: 14px !important;
+}
+/* Ends Francis*/
