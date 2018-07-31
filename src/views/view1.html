@@ -12,7 +12,6 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" type="text/css" media="screen" href="../css/main.css" />
     <!--<ul id="nav-mobile" class="right hide-on-med-and-down"> -->
-
 </head>
 
 <body>
@@ -30,7 +29,6 @@
                             <img src="../images/chile.jpg">
                         </div>
                         <a href="#user" id="iconuser">
-
                         </a>
                         <a href="#name" id="name">
                             <span class="white-text name">John Doe</span>
@@ -77,34 +75,33 @@
                         <i class="material-icons right">exit_to_app </i>Log Out</a>
                 </li>
             </ul>
-            <section>
-                <a href="#" data-target="slide-out" class="sidenav-trigger center-align col s2 m2 l2 fixed-navbar">
-                    <i class="material-icons icon-pad">face</i>
-                </a>
+            <a href="#" data-target="slide-out" class="sidenav-trigger center-align col s2 m2 l2 fixed-navbar">
+                <i class="material-icons icon-pad">face</i>
+            </a>
+            <div class="divider"></div>
+            <a href="#">
+                <img class="col s8 m8 l8" height="100" src="../images/Logo-NavBar.png">
+            </a>
+            <div class="divider"></div>
+            <a id="flip" class="center-align col s2 m2 l2 fixed-navbar">
+                <i class="material-icons icon-pad">add_circle_outline</i>
+            </a>
+            <div class="divider"></div>
+            <nav class="fixed-navbar center-align col s12 m12 l12  fixed-navbar">
                 <div class="divider"></div>
-                <a href="#" class="center-align col s8 m8 l8 fixed-navbar">
-                    <h4>Mexican Food Lovers</h4>
-                </a>
-                <div class="divider"></div>
-                <a id="flip" class="center-align col s2 m2 l2 fixed-navbar">
-                    <i class="material-icons icon-pad">add_circle_outline</i>
-                </a>
-                <div class="divider"></div>
-                <nav class="fixed-navbar center-align col s12 m12 l12  fixed-navbar">
-                    <div class="divider"></div>
-                    <div class="nav-wrapper">
-                        <form>
-                            <div class="input-field">
-                                <input id="search" type="search" placeholder="buscar un platillo, ingrediente o lugar..." required>
-                                <label class="label-icon" for="search">
-                                    <i class="material-icons">search</i>
-                                </label>
-                                <i class="material-icons">close</i>
-                            </div>
-                        </form>
-                    </div>
-                </nav>
-                <div class="divider"></div>
+                <div class="nav-wrapper">
+                    <form>
+                        <div class="input-field">
+                            <input id="search" type="search" placeholder="buscar un platillo, ingrediente o lugar..." required>
+                            <label class="label-icon" for="search">
+                                <i class="material-icons">search</i>
+                            </label>
+                            <i class="material-icons">close</i>
+                        </div>
+                    </form>
+                </div>
+            </nav>
+            <div class="divider"></div>
             </section>
         </header>
         <!-- End of the navigation profile side bar-->
@@ -114,19 +111,18 @@
                     <li class="col s4 m4 l4">
                         <a>
                             <i id="add-photo" class="material-icons">add_a_photo
-
                             </i>
                         </a>
                     </li>
                     <li>
-                        <a id="add-recipe">
-                            <i class="material-icons">free_breakfast</i>
+                        <a>
+                            <i id="add-recipe" class="material-icons">free_breakfast
+                            </i>
                         </a>
-
                     </li>
                     <li>
-                        <a id="add-place">
-                            <i class="material-icons">add_location
+                        <a>
+                            <i id="add-place" class="material-icons">add_location
                             </i>
                         </a>
                     </li>
@@ -311,7 +307,9 @@
                     <!--Aqui se pinta las recetas-->
                     <div id="post">
                     </div>
-
+                    <a id="btn-edit" href="#">
+                        <i class="material-icons">edit</i>
+                    </a>
                     <!-- Aqui termino MIR -->
         </section>
         <!--Post Lugares-->
@@ -384,6 +382,7 @@
                     </div>
                 </div>
             </div>
+            </div>
         </section>
         <!-- inicia footer-->
         <footer class="page-footer">
@@ -420,8 +419,11 @@
             </div>
 
         </footer>
-        <!--cierra container-->
+
         </div>
+
+        <!--cierra container-->
+
 
         <!--End of TimeLine-->
         <!-- Get Firebase -->

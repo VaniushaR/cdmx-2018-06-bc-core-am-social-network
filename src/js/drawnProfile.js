@@ -1,4 +1,4 @@
-// side navbar iniatization with JQuery
+//side navbar iniatization with JQuery
 $(document).ready(function() {
   $('.sidenav').sidenav();
 });
@@ -15,7 +15,7 @@ $(document).ready(function() {
   $('.collapsible').collapsible();
 });
 
-// actication of collapsible add buttons to show the format for places, photos and recipes
+//activation of collapsible add buttons to show the format for places, photos and recipes
 $(document).ready(function() {
   $('add-photo').click(function() {
     $('photo-format').slideToggle('slow');
@@ -34,7 +34,7 @@ $(document).ready(function() {
   });
 });
 
-// like and dislike bar functions
+//like and dislike bar functions
 let likes = 0;
 let dislikes = 0;
 
@@ -61,7 +61,18 @@ const calculateBar = () => {
     totalDisLikesAverage.toString() + '%';
 };
 
-// llamdo del DOM
+// //botón de favoritos para luagres
+// let favPlace = document.getElementById('favorite-place');
+// favPlace.addEventListener('click', lu);
+
+// let favPlaces = 0;
+
+// const lugaresFavoritos = () => {
+//   let favPlaces += favPlace;
+
+// }
+
+//edición del perfil
 const btnEditPerfil = document.getElementById('btn-edit');
 let editDescription = document.getElementById('perfil');
 let databaseRef;
@@ -82,7 +93,6 @@ const dbaseRef = user => {
     }
   });
 };
-
 // funcion para agregar about me en firebase
 const sendPerfilFirebase = (databaseRef, userDescriptionFb) => {
   databaseRef.set({
@@ -129,14 +139,24 @@ const editAboutMe = () => {
 };
 btnEditPerfil.addEventListener('click', editAboutMe);
 
-btnEditPerfil.addEventListener('click', editAboutMe);
-
+// Función del boton salvar el nuevo perfil
 const saveNewAboutMe = () => {
   let newDescription = document.getElementById('n-descripcion').value;
-  let userDescription = localStorage.setItem(
-    'keyD',
-    JSON.stringify(newDescription)
-  );
-  userDescriptionN = JSON.parse(localStorage.getItem('keyD'));
-  editDescription.innerHTML = `<p>${userDescriptionN}</p>`;
+  // Validando que no se admitan etiquetas html
+  for (let i = 0; i < newDescription.length; i++) {
+    let letterDescrip = newDescription[i].charCodeAt();
+    if (letterDescrip === 60 || letterDescrip === 62) {
+      swal('Ooops,no puedes usar los signos "<" ">"');
+      btnEditPerfil.style.display = 'block';
+      return perfilLogin();
+    }
+  }
+
+  btnEditPerfil.style.display = 'block';
+  return (editDescription.innerHTML = `<p>${userDescriptionN}</p>`);
+};
+
+const cancelNewAboutMe = () => {
+  perfilLogin();
+  btnEditPerfil.style.display = 'block';
 };
