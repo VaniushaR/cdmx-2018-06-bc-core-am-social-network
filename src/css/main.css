@@ -14,6 +14,10 @@
 #titulos2 {
   color: gray;
 }
+form {
+  padding: 10px;
+  margin-bottom: 5px;
+}
 .aboutme-card {
   background-color: #f9f888;
   color: #9e4f13;
@@ -71,3 +75,14 @@ h4 {
   height: 10%;
   width: 30%;
 }
+/*Francis's Desing*/
+.btn {
+  background-color: #4caf50 !important ;
+}
+.red {
+  background-color: red !important ;
+}
+#form-recipe, #form-places {
+  display: none;
+}
+/* Ends Francis*/
