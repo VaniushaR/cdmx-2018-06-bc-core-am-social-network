@@ -35,6 +35,34 @@ $(document).ready(function() {
   });
 });
 
+// like and dislike bar functions
+let likes = 0;
+let dislikes = 0;
+
+// document.getElementById('dislike').addEventListener('click', dislike);
+// document.getElementById('like').addEventListener('click', like);
+
+const like = () => {
+  likes++;
+  calculateBar();
+};
+
+const dislike = () => {
+  dislikes++;
+  calculateBar();
+};
+
+const calculateBar = () => {
+  let total = likes + dislikes;
+  let totalLikesAverage = (likes / total) * 100;
+  let totalDisLikesAverage = (dislikes / total) * 100;
+  document.getElementById('likes').style.width =
+    totalLikesAverage.toString() + '%';
+  document.getElementById('dislikes').style.width =
+    totalDisLikesAverage.toString() + '%';
+};
+
+
 // llamdo del DOM
 const btnEditPerfil = document.getElementById('btn-edit');
 let editDescription = document.getElementById('perfil');
