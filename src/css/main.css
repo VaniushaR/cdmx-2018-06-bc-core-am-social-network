@@ -60,14 +60,14 @@ h4 {
 #likes {
   height: 15px;
   width: 50%;
-  background-color: yellow;
+  background-color: #54bd5c;
   float: left;
 }
 
 #dislikes {
   height: 15px;
   width: 50%;
-  background-color: red;
+  background-color: #f34a41;
   float: right;
 }
 
