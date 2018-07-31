@@ -18,31 +18,33 @@ firebase.auth().onAuthStateChanged(user => {
     if (user !== null) {
       profileuser(user);
       adduser(user);
+      // En la siguiente linea hizo cambios Mir
+      dbaseRef(user);
       // Reference
-      // child_added:
+
+    // child_added:
     // child_changed:
     // child_remove:
     }
   } else {
   }
 });
-const adduser =(usuario)=> {
-let database = firebase.database();
-let user = {
-  uid: usuario.uid,
-  name: usuario.displayName,
-  mail: usuario.email,
-  photo: usuario.photoURL
-}
-firebase.database().ref(`user/${usuario.uid}`).set(user);
-
-}
+const adduser = (usuario)=> {
+  let database = firebase.database();
+  let user = {
+    uid: usuario.uid,
+    name: usuario.displayName,
+    mail: usuario.email,
+    photo: usuario.photoURL
+  };
+  firebase.database().ref(`user/${usuario.uid}`).set(user);
+};
 // Function for update post
 window.onload = getpost = ()=> {
-let html = '';
-let user = firebase.auth().currentUser;
-firebase.database().ref('user/posts').on('value', snapshot => {
-      snapshot.forEach(event => {
+  let html = '';
+  let user = firebase.auth().currentUser;
+  firebase.database().ref('user/posts').on('value', snapshot => {
+    snapshot.forEach(event => {
       let key = event.key;
       let element = event.val();
 
@@ -53,7 +55,7 @@ firebase.database().ref('user/posts').on('value', snapshot => {
       let title = element.title.toUpperCase();
       let people = element.people;
       let ingredients = element.ingredients;
-      let steps= element.steps;
+      let steps = element.steps;
 
       // let post = element.posts;
       html = `<ul class ='collection'><li class = 'collection-item avatar'>
@@ -68,13 +70,13 @@ firebase.database().ref('user/posts').on('value', snapshot => {
       </li></ul>`;
     });
     post.innerHTML = html;
-    if(post != ''){
+    if (post != '') {
       let elementsDelete = document.getElementsByClassName('btn-delete');
       for (let i = 0; i < elementsDelete.length; i++) {
         console.log(elementsDelete[i]);
         elementsDelete[i].addEventListener('click', e => {
           let key = e.target;
-          let keyDataDelete = key.getAttribute("data-message");
+          let keyDataDelete = key.getAttribute('data-message');
           let refPostDelete = firebase.database().ref('user/posts').child(keyDataDelete);
           refPostDelete.remove();
         });
@@ -82,8 +84,6 @@ firebase.database().ref('user/posts').on('value', snapshot => {
     }
   });
 };
-
-
 
 
 const postsRecipe = () => {
@@ -96,7 +96,7 @@ const postsRecipe = () => {
   let ingredients = document.getElementById('get-ingredients');
   let steps = document.getElementById('textarea2');
   // Drawning posts
-post.innerHTML = `<ul class ='collection'><li class = 'collection-item avatar'>
+  post.innerHTML = `<ul class ='collection'><li class = 'collection-item avatar'>
 <img src='${user.photoURL}' class='circle'>
 <span class = 'title'>${user.displayName}</span>
 <p><b>${title.value} <b><br>
@@ -105,7 +105,7 @@ post.innerHTML = `<ul class ='collection'><li class = 'collection-item avatar'>
 <b>Pasos </b>${steps.value}<br>
   </p>
 </li></ul>`;
-firebase.database().ref(`user/posts`).push({
+  firebase.database().ref('user/posts').push({
     ui: user.uid,
     name: user.displayName,
     photo: user.photoURL,
@@ -118,10 +118,10 @@ firebase.database().ref(`user/posts`).push({
 
   // modified by Francis
   title.value = '';
-  people.value ='';
-  ingredients.value ='';
+  people.value = '';
+  ingredients.value = '';
   steps.value = '';
-  formRecipe.style.display ='none';
+  formRecipe.style.display = 'none';
   formPlaces.style.display = 'none';
 };
 
@@ -136,31 +136,30 @@ let unsesion = document.getElementById('logout');
 unsesion.addEventListener('click', logout);
 // modified by Francis
 // Event of Choose post
-let choosePost = document.getElementById('choose-post');
-choosePost.addEventListener('change', e => {
-let formRecipe = document.getElementById('form-recipe');
-let formPlaces = document.getElementById('form-places');
-if (choosePost.value =='Recetas') {
-  formRecipe.style.display ='block';
-  formPlaces.style.display = 'none';
-} else {
-  formRecipe.style.display ='none';
-  formPlaces.style.display = 'block';
-}
+// let choosePost = document.getElementById('choose-post');
+// choosePost.addEventListener('change', e => {
+//   let formRecipe = document.getElementById('form-recipe');
+//   let formPlaces = document.getElementById('form-places');
+//   if (choosePost.value == 'Recetas') {
+//     formRecipe.style.display = 'block';
+//     formPlaces.style.display = 'none';
+//   } else {
+//     formRecipe.style.display = 'none';
+//     formPlaces.style.display = 'block';
+//   }
+// });
+// let ingredientSelected = document.getElementById('ingredients');
+// ingredientSelected.addEventListener('change', e => {
+//   let ingredients = document.getElementById('get-ingredients');
+//   ingredients.value += `${ingredientSelected.value}, `;
+// });
 
+
+// modified by Francis
+// With jQuery
+$(document).ready(function() {
+  $('select').formSelect();
 });
-let ingredientSelected = document.getElementById('ingredients');
-ingredientSelected.addEventListener('change', e => {
-  let ingredients = document.getElementById('get-ingredients');
-  ingredients.value += `${ingredientSelected.value}, `;
-})
-
-
-//modified by Francis
-  // With jQuery
-  $(document).ready(function(){
-    $('select').formSelect();
-  });
-  $(document).ready(function() {
-    $('input#input_text, input#input_places, input#input_address,  input#input_city, input#input_description, extarea#textarea2').characterCounter();
-  });
+$(document).ready(function() {
+  $('input#input_text, input#input_places, input#input_address,  input#input_city, input#input_description, extarea#textarea2').characterCounter();
+});

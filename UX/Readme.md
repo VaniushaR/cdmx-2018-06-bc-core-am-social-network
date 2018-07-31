@@ -14,12 +14,37 @@ Pero un gran sabor no es la unica caracteristica de la comida de México, pues e
 ### **Descubrimiento e investigación**
 __Encuestas__
 Se realizaron un par de encuestas para definir mejor las nececidades de nuestrxs usuarixs potenciales.
-Estas son las graficas.
+Estas son las graficas iniciales.
 
 ![alt text](imagenes/Encuesta1.jpg)
 ![alt text](imagenes/Encuesta2.jpg)
 ![alt text](imagenes/Encuesta3.jpg)
 ![alt text](imagenes/Encuesta4.jpg)
+
+Las siguientes encuestas mostraron una tendencia hacia los mismos resultados.
+
+![alt text](imagenes/Encuesta1a.jpg)
+![alt text](imagenes/Encuesta2a.jpg)
+![alt text](imagenes/Encuesta3a.jpg)
+![alt text](imagenes/Encuesta4a.jpg)
+
+__Demanda de Mercado para la Comida:__
+
+Hoy en día una moda que esta creciendo es el tener interes en conocer de dónde vienen los ingredientes que tienen los platillos que consumimos a la vez que buscamos consumir lo más productos de origen locales. Un ejemplo de ello es lo que esta pasando con la comida mexicana.
+El año pasado, situaciones políticas y fenómenos naturales, hicieron a los mexicanos voltear al comercio y productores locales, a poner mayor atención en el origen de lo que se llevan a la boca, lo que ha hecho que los restaurantes representantes de esta rica gastronimia esten volviendo a las raíces tradicionales dandole un golpe de modernidad.
+
+Los siguientes datos nos ayudan a ver mejor esta tendencia.
+* La gastronimia Méxicana esta catalogada como Patrimonio Cultural de la Humanidad.
+* En 2017, en el evento Latin American 50 Best Restaurant chefs de talla mundial se dieron cita para galardonar a los mejores restaurantes de Latinoamerica. __México es el país con más representantes de la lista, con 13 restaurantes__.
+* Resurgimiento de mercados, como lugares Trendy en redes sociales:
+Sitios como:
+    * Milán 44, en la Ciudad de México; 
+    * Mercado del Carmen, en San Miguel de Allende; 
+    * PIKI Market, en Cholula;Alhóndiga Reforma, en Oaxaca; 
+    * Mercado México, en Guadalajara;
+    * Santiago, en Querétaro.
+* Basado en una encuesta del portal de reserva de alojamiento Booking, una de las tendencias para el 2018 en cuanto a gastronomía será viajar para probar la comida callejera de cada destino (en México).
+* A abril de 2017 había 59 mil 800 establecimientos de comida mexicana en todo Estados Unidos, siete por ciento más que en 2014; volviendose el segundo tipo de comida más popular en ese país.
 
 
 __Perfil de Usuarix:__  
@@ -73,7 +98,6 @@ __Prototipo (Alta fidelidad)__
 
 Esta fue nuestra primera propuesta.
 
-Nuestro primer bosquejo:
 
 ![alt text](imagenes/protA1.jpeg)
 
@@ -85,6 +109,16 @@ Nuestro primer bosquejo:
 
 Despues de la primera entrevista con el inversionista, nuestra propuesta, que iba más orientada a comida saludable, cambio y este es el prototipo que surgio de las nuevas ideas:
 [Segundo Prototipo de Alta Fidelidad](https://marvelapp.com/183635ig).
+
+__Tipografía y Paleta de Colores__
+
+La tipografía elegida para este proyecto fue tomada de la pagina de Google Fonts:  [Dosis](https://fonts.google.com/specimen/Dosis),
+Consideramos que estetica y limpia sin llegar a la formaidad que no queremos transmitir en nuestra red social.
+
+La paleta de colores elegida es la siguiente:
+
+![alt text](imagenes/palet_de-colores.jpg)
+
 
 
 __Entrevista con Inversionista__
