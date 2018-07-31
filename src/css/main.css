@@ -36,3 +36,38 @@ h4 {
 #submenu {
   background-color: aqua;
 }
+#card-padding {
+  background-color: #f9f888;
+  font-family: 'Oswald', sans-serif;
+  color: black;
+  padding: 0%;
+}
+#ranking {
+  width: 100%;
+  margin: 20px auto;
+  text-align: center;
+}
+
+#bar {
+  margin: 0 auto;
+  width: 100%;
+}
+
+#likes {
+  height: 15px;
+  width: 50%;
+  background-color: yellow;
+  float: left;
+}
+
+#dislikes {
+  height: 15px;
+  width: 50%;
+  background-color: red;
+  float: right;
+}
+
+#name-logo {
+  height: 10%;
+  width: 30%;
+}
