@@ -61,6 +61,17 @@ const calculateBar = () => {
     totalDisLikesAverage.toString() + '%';
 };
 
+// //botón de favoritos para luagres
+// let favPlace = document.getElementById('favorite-place');
+// favPlace.addEventListener('click', lu);
+
+// let favPlaces = 0;
+
+// const lugaresFavoritos = () => {
+//   let favPlaces += favPlace;
+
+// }
+
 //edición del perfil
 const btnEditPerfil = document.getElementById('btn-edit');
 let editDescription = document.getElementById('perfil');
