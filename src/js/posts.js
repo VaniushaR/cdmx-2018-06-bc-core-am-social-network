@@ -11,6 +11,7 @@ const logout = () => {
   firebase.auth().signOut();
   location.href = ('../index.html');
 };
+
 firebase.auth().onAuthStateChanged(user => {
   if (user) {
     // User is signed in.
@@ -26,6 +27,8 @@ firebase.auth().onAuthStateChanged(user => {
   } else {
   }
 });
+
+
 const adduser =(usuario)=> {
 let database = firebase.database();
 let user = {
@@ -35,8 +38,8 @@ let user = {
   photo: usuario.photoURL
 }
 firebase.database().ref(`user/${usuario.uid}`).set(user);
+}
 
-};
 // Function for update post
 window.onload = getpost = ()=> {
 let html = '';
@@ -61,6 +64,7 @@ firebase.database().ref('user/posts').on('value', snapshot => {
       let steps= element.steps;
 
       // let post = element.posts;
+
       html += `<div class='col s12 m12 l12'>
       <section class='card'>
       <section class='card-image'>
@@ -91,19 +95,8 @@ firebase.database().ref('user/posts').on('value', snapshot => {
       <a class="waves-effect waves-light btn-small btn col s12 l4"><i class="material-icons left ">create</i>Editar</a><a class='waves-effect waves-light btn-small red btn-delete col s12 l4 offset-l2' data-message = '${key}'><i class="material-icons left">delete</i>Borrar</a>
       </section>
       </section>
-
           </div>`;
-      // <ul class ='collection'><li class = 'collection-item avatar'>
-      // <img src='${photo}' class='circle'>
-      // <span class = 'title'>${name}</span>
-      // <p><b>${title} </b><br>
-      // <b>Porción para </b>${people} Personas<br>
-      // <b>Ingredientes </b>${ingredients}<br>
-      // <b>Pasos </b>${steps}<br></p>
-      // <a class="waves-effect waves-light btn-small btn"><i class="material-icons left ">create</i>Editar</a><a class='waves-effect waves-light btn-small red btn-delete' data-message = '${key}'><i class="material-icons left">delete</i>Borrar</a>
-      // </section>
-      // </li></ul>
-    });
+
     post.innerHTML = html;
     if(post != ''){
       let elementsDelete = document.getElementsByClassName('btn-delete');
@@ -115,12 +108,11 @@ firebase.database().ref('user/posts').on('value', snapshot => {
           let refPostDelete = firebase.database().ref('user/posts').child(keyDataDelete);
           refPostDelete.remove();
         });
-      }
-    }
+      };
+    };
   });
-};
-
-
+});
+}
 
 
 const postsRecipe = () => {
@@ -155,6 +147,7 @@ firebase.database().ref(`user/posts`).push({
   });
 
 
+
   // modified by Francis
   title.value = '';
   people.value = '';
@@ -175,6 +168,7 @@ let unsesion = document.getElementById('logout');
 unsesion.addEventListener('click', logout);
 // modified by Francis
 // Event of Choose post
+
 let chooseRecipe = document.getElementById('add-recipe');
 let choosePlaces = document.getElementById('add-place');
 chooseRecipe.addEventListener('click', e => {
@@ -198,7 +192,7 @@ uploadImages.on('state_changed', snapshot => {
 
 }, error =>{
 
-}, () => {
+},  () => {
 let imageURL = uploadImages.snapshot.downloadURL;
 });
 }
@@ -207,12 +201,11 @@ const createNode =(url)=> {
 
 }
 
-
 let ingredientSelected = document.getElementById('ingredients');
 ingredientSelected.addEventListener('change', e => {
   let ingredients = document.getElementById('get-ingredients');
   ingredients.value += `${ingredientSelected.value}, `;
-})
+});
 
 
 //modified by Francis
