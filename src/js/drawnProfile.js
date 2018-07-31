@@ -1,21 +1,39 @@
 
-// side navbar iniatization with JQuery
-$(document).ready(function () {
+//side navbar iniatization with JQuery
+$(document).ready(function() {
   $('.sidenav').sidenav();
 });
-// end of the navbar activation
 
-// login con google y firebase
-/* const provider = new firebase.auth.GoogleAuthProvider();
-let btnGoogle = document.activeElement("login-g");
-btnGoogle.addEventListener("click", event => {
-  firebase.auth().signInWithPopup;
-});*/
+//activation of side down panel display
+$(document).ready(function() {
+  $('#flip').click(function() {
+    $('#panel').slideToggle('slow');
+  });
+});
 
-// fin
+//activation of collapsible and expanded accordion for coments and opinions
+$(document).ready(function() {
+  $('.collapsible').collapsible();
+});
 
+//actication of collapsible add buttons to show the format for places, photos and recipes
+$(document).ready(function() {
+  $('add-photo').click(function() {
+    $('photo-format').slideToggle('slow');
+  });
+});
 
-// Aqui empezo a codear Mir.
+$(document).ready(function() {
+  $('add-place').click(function() {
+    $('place-format').slideToggle('slow');
+  });
+});
+
+$(document).ready(function() {
+  $('add-recipe').click(function() {
+    $('recipe-format').slideToggle('slow');
+  });
+});
 
 const btnEditPerfil = document.getElementById('btn-edit');
 let editDescription = document.getElementById('perfil');
@@ -32,15 +50,19 @@ const editAboutMe = () => {
       <i class = "material-icons ">done</i>
     </a>
   `;
+  // Cambios
   const btnSave = document.getElementById('btn-save');
   btnSave.addEventListener('click', saveNewAboutMe);
 };
 
-btnEditPerfil.addEventListener('click', editAboutMe); 
+btnEditPerfil.addEventListener('click', editAboutMe);
 
 const saveNewAboutMe = () => {
   let newDescription = document.getElementById('n-descripcion').value;
-  let userDescription = localStorage.setItem('keyD', JSON.stringify(newDescription));
+  let userDescription = localStorage.setItem(
+    'keyD',
+    JSON.stringify(newDescription)
+  );
   userDescriptionN = JSON.parse(localStorage.getItem('keyD'));
   editDescription.innerHTML = `<p>${userDescriptionN}</p>`;
 };
