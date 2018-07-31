@@ -56,7 +56,7 @@ h4 {
 #likes {
   height: 15px;
   width: 50%;
-  background-color: #41bb9a;
+  background-color: yellow;
   float: left;
 }
 
@@ -65,4 +65,9 @@ h4 {
   width: 50%;
   background-color: red;
   float: right;
+}
+
+#name-logo {
+  height: 10%;
+  width: 30%;
 }
